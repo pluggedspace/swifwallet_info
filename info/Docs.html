@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swif Wallet Documentation</title>
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background: #007BFF;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+        }
+
+        nav {
+            background: #f1f1f1;
+            padding: 10px 0;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: 600;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            background: #007BFF;
+            color: #fff;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #007BFF;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: #555;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        ul li, ol li {
+            margin-bottom: 10px;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Swif Wallet Documentation</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="swifTL.html">Timeline</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Introduction</h2>
+            <p>Swif is a modern cross-border international wallet designed to facilitate easy, cost-effective, and secure financial transactions. It leverages the Stellar blockchain network for seamless USDC transactions, with integrations for ramps, investing, and utility payments. Swif aims to redefine financial inclusion for its users by focusing on low fees, user-friendliness, and scalability.</p>
+        </section>
+
+        <section>
+            <h2>Features</h2>
+            <h3>Core Features</h3>
+            <ul>
+                <li><strong>Cross-Border Remittance:</strong> Instant transactions across borders with minimal fees, powered by Stellar blockchain’s USDCXLM.</li>
+                <li><strong>Multi-Currency Support:</strong> Store and transact in multiple currencies with on-the-fly conversion to USDC.</li>
+                <li><strong>Vendor Integration:</strong> Prefill vendor details based on user profiles and country-specific availability.</li>
+                <li><strong>Security:</strong> Encryption standards for sensitive data and two-factor authentication for account protection.</li>
+                <li><strong>User-Centric Design:</strong> Easy-to-use interface powered by Flutter and pre-fetching of user details for seamless onboarding.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>System Design</h2>
+            <h3>Architecture Overview</h3>
+            <ul>
+                <li><strong>Frontend:</strong> Built with Flutter for cross-platform support.</li>
+                <li><strong>Backend:</strong> Written in Python with Django, integrates Stellar SDK for blockchain functionality.</li>
+                <li><strong>Database:</strong> PostgreSQL.</li>
+                <li><strong>Hosting:</strong> Deployed on AWS Free Tier for MVP.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <p>For support or feedback:</p>
+            <ul>
+                <li>Email: <a href="mailto:swif@pluggedspace.org">swif@pluggedspace.org</a></li>
+                <li>Website: <a href="https://swifwallet.com" target="_blank">Swif Wallet</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2024 Swif Wallet. All rights reserved.
+    </footer>
+</body>
+</html>
