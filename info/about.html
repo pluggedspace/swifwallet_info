@@ -6,6 +6,137 @@
     <meta name="description" content="Learn more about Swif - Your cross-border international wallet">
     <title>About - Swif</title>
     <link rel="stylesheet" href="styles.css"> <!-- Optional CSS file -->
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --background-color: #f5f5f5;
+            --text-color: #333;
+            --white: #fff;
+            --gray: #666;
+            --transition: 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover {
+            background-color: var(--white);
+            color: var(--primary-color);
+            border-radius: 4px;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        section:hover {
+            transform: scale(1.02);
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style: disc;
+            margin-left: 2rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: var(--primary-color);
+            color: var(--white);
+            margin-top: 2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            main {
+                padding: 1rem;
+            }
+        }
+
+        /* Interactivity */
+        .collapsible {
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .collapsible::after {
+            content: "\25B6";
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .collapsible.open::after {
+            transform: rotate(90deg);
+        }
+
+        .collapsible-content {
+            display: none;
+            margin-top: 0.5rem;
+        }
+
+        .collapsible.open + .collapsible-content {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,78 +144,75 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="swiftl.html">Timeline</a></li>
+                <li><a href="faq.html">FAQ</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section>
-            <h2>Our Mission</h2>
-            <p>
-                Swif is a cross-border international wallet designed to make remittance and global payments 
-                simple, cost-effective, and secure. Our mission is to empower individuals and businesses by 
-                providing seamless financial solutions that transcend borders.
-            </p>
+            <div class="collapsible">Our Mission</div>
+            <div class="collapsible-content">
+                <p>
+                    Swif is a cross-border international wallet designed to make remittance and global payments 
+                    simple, cost-effective, and secure. Our mission is to empower individuals and businesses by 
+                    providing seamless financial solutions that transcend borders.
+                </p>
+            </div>
         </section>
         <section>
-            <h2>Use Cases</h2>
-            <ul>
-                <li><strong>Cross-Border Payments:</strong> Send money across borders quickly with low transaction fees.</li>
-                <li><strong>Investment Opportunities:</strong> Manage your investments and access financial tools for growth.</li>
-                <li><strong>Utility Payments:</strong> Pay for utilities like electricity, water, and internet conveniently.</li>
-                <li><strong>IBAN Functionality:</strong> Obtain a virtual IBAN for international banking needs.</li>
-                <li><strong>Shopping:</strong> Pooled shopping for cost savings and bulk purchases.</li>
-            </ul>
+            <div class="collapsible">Use Cases</div>
+            <div class="collapsible-content">
+                <ul>
+                    <li><strong>Cross-Border Payments:</strong> Send money across borders quickly with low transaction fees.</li>
+                    <li><strong>Investment Opportunities:</strong> Manage your investments and access financial tools for growth.</li>
+                    <li><strong>Utility Payments:</strong> Pay for utilities like electricity, water, and internet conveniently.</li>
+                    <li><strong>IBAN Functionality:</strong> Obtain a virtual IBAN for international banking needs.</li>
+                    <li><strong>Shopping:</strong> Pooled shopping for cost savings and bulk purchases.</li>
+                </ul>
+            </div>
         </section>
         <section>
-            <h2>Development Stage</h2>
-            <p>
-                Swif is currently in the Minimum Viable Product (MVP) phase, focusing on building a robust wallet with basic functionalities:
-            </p>
-            <ul>
-                <li>Wallet creation and management</li>
-                <li>Integration with Stellar for token transactions</li>
-                <li>Onboarding and offboarding ramps for fiat-to-crypto conversions</li>
-            </ul>
-            <p>
-                Future development includes expanding DeFi capabilities, introducing liquidity management, and enabling cross-chain token swaps.
-            </p>
+            <div class="collapsible">Development Stage</div>
+            <div class="collapsible-content">
+                <p>
+                    Swif is currently in the Minimum Viable Product (MVP) phase, focusing on building a robust wallet with basic functionalities:
+                </p>
+                <ul>
+                    <li>Wallet creation and management</li>
+                    <li>Integration with Stellar for token transactions</li>
+                    <li>Onboarding and offboarding ramps for fiat-to-crypto conversions</li>
+                </ul>
+                <p>
+                    Future development includes expanding DeFi capabilities, introducing liquidity management, and enabling cross-chain token swaps.
+                </p>
+            </div>
         </section>
         <section>
-            <h2>Token Development</h2>
-            <p>
-                Swif leverages <strong>USDC</strong> on the Stellar blockchain (USDCXLM) as the primary token for transactions. All transactions are converted into USDC to simplify currency exchange and provide stability. Future plans include:
-            </p>
-            <ul>
-                <li>Integration with Stellar-based DeFi protocols</li>
-                <li>Enabling users to buy/sell tokens directly via the Stellar DEX</li>
-                <li>Rewarding liquidity providers through incentive programs</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Key Features</h2>
-            <ul>
-                <li>Low transaction fees for remittances</li>
-                <li>Multi-currency support</li>
-                <li>Highly secure transactions using blockchain technology</li>
-                <li>Prefilled user details for seamless onboarding</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Why Choose Swif?</h2>
-            <p>
-                Swif stands out with its commitment to user-friendliness, robust security, and low-cost financial solutions. Whether you're an individual or a business, Swif is here to simplify your global financial operations.
-            </p>
-        </section>
-        <section>
-            <h2>Get Involved</h2>
-            <p>
-                As Swif is still in development, we welcome partnerships, collaborations, and feedback to shape its future. Contact us to learn how you can be part of this journey.
-            </p>
+            <div class="collapsible">Token Development</div>
+            <div class="collapsible-content">
+                <p>
+                    Swif leverages <strong>USDC</strong> on the Stellar blockchain (USDCXLM) as the primary token for transactions. All transactions are converted into USDC to simplify currency exchange and provide stability. Future plans include:
+                </p>
+                <ul>
+                    <li>Integration with Stellar-based DeFi protocols</li>
+                    <li>Enabling users to buy/sell tokens directly via the Stellar DEX</li>
+                    <li>Rewarding liquidity providers through incentive programs</li>
+                </ul>
+            </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Swif. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Add interactivity for collapsible sections
+        document.querySelectorAll('.collapsible').forEach(collapse => {
+            collapse.addEventListener('click', () => {
+                collapse.classList.toggle('open');
+            });
+        });
+    </script>
 </body>
 </html>
