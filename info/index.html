@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Navigate through the sections of the website easily.">
     <title>Home - Swif</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         /* Styles for a clean white background and black text design */
         body {
@@ -64,6 +65,24 @@
             transform: scale(1.1);
         }
 
+        .social-icons {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .social-icons a {
+            color: black;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .social-icons a:hover {
+            color: black;
+            transform: scale(1.2);
+        }
+
         footer {
             position: absolute;
             bottom: 10px;
@@ -91,6 +110,12 @@
             <li><a href="team.html">Team</a></li>
         </ul>
     </nav>
+    <div class="social-icons">
+        <a href="https://www.instagram.com" target="_blank" class="fab fa-instagram" title="Instagram"></a>
+        <a href="https://twitter.com" target="_blank" class="fab fa-twitter" title="Twitter"></a>
+        <a href="https://www.facebook.com" target="_blank" class="fab fa-facebook" title="Facebook"></a>
+        <a href="https://www.tiktok.com" target="_blank" class="fab fa-tiktok" title="TikTok"></a>
+    </div>
     <footer>
         <p>&copy; 2024 Swif. All rights reserved.</p>
     </footer>
