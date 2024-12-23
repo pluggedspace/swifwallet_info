@@ -9,9 +9,8 @@
         /* Root Variables for Minimal Design */
         :root {
             --background: #fff;
-            --text-color: #333;
+            --text-color: #000;
             --subtext-color: #555;
-            --highlight-color: #4CAF50;
             --shadow: rgba(0, 0, 0, 0.1);
             --transition: 0.3s ease;
         }
@@ -39,7 +38,6 @@
         header h1 {
             font-size: 2rem;
             font-weight: bold;
-            color: var(--highlight-color);
             margin-bottom: 1rem;
             text-align: center;
         }
@@ -61,8 +59,8 @@
         }
 
         nav ul li a:hover {
-            background: var(--highlight-color);
-            color: #fff;
+            background: var(--shadow);
+            color: var(--text-color);
         }
 
         main {
@@ -87,7 +85,6 @@
             font-size: 1.5rem;
             font-weight: bold;
             margin-bottom: 1rem;
-            color: var(--highlight-color);
         }
 
         p, ul {
@@ -110,7 +107,7 @@
         ul li::before {
             content: "•";
             font-size: 1.2rem;
-            color: var(--highlight-color);
+            color: var(--subtext-color);
         }
 
         footer {
@@ -127,15 +124,16 @@
             justify-content: space-between;
             align-items: center;
             padding: 1rem;
-            background-color: var(--highlight-color);
-            color: white;
+            background-color: transparent;
+            color: var(--text-color);
+            border: 1px solid var(--shadow);
             border-radius: 6px;
             margin-bottom: 1rem;
             transition: var(--transition);
         }
 
         .collapsible:hover {
-            background-color: #388E3C;
+            background: var(--shadow);
         }
 
         .collapsible-content {
