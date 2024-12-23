@@ -5,15 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learn more about Swif - Your cross-border international wallet">
     <title>About - Swif</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Optional CSS file -->
     <style>
+        /* Root Variables for Minimal Design */
         :root {
-            --primary-color: #3498db;
-            --secondary-color: #2c3e50;
-            --background-color: #f5f5f5;
+            --background: #fff;
             --text-color: #333;
-            --white: #fff;
-            --gray: #666;
+            --subtext-color: #555;
+            --shadow: rgba(0, 0, 0, 0.1);
             --transition: 0.3s ease;
         }
 
@@ -21,116 +19,112 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
         }
 
         body {
-            background-color: var(--background-color);
+            background-color: var(--background);
             color: var(--text-color);
-            line-height: 1.6;
+            line-height: 1.8;
         }
 
         header {
-            background: var(--primary-color);
-            color: var(--white);
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid var(--shadow);
         }
 
         header h1 {
             font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
         }
 
         nav ul {
             list-style: none;
             display: flex;
             gap: 1rem;
+            margin-top: 0.5rem;
         }
 
         nav ul li a {
-            color: var(--white);
             text-decoration: none;
+            color: var(--subtext-color);
             padding: 0.5rem 1rem;
+            border-radius: 4px;
             transition: var(--transition);
         }
 
         nav ul li a:hover {
-            background-color: var(--white);
-            color: var(--primary-color);
-            border-radius: 4px;
+            background: var(--shadow);
+            color: var(--text-color);
         }
 
         main {
-            padding: 2rem;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
         }
 
         section {
             margin-bottom: 2rem;
             padding: 1.5rem;
-            background: var(--white);
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 8px var(--shadow);
             transition: var(--transition);
         }
 
         section:hover {
-            transform: scale(1.02);
+            transform: scale(1.01);
         }
 
         h2 {
-            color: var(--secondary-color);
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: var(--subtext-color);
             margin-bottom: 1rem;
         }
 
         ul {
-            list-style: disc;
-            margin-left: 2rem;
+            list-style: none;
+            padding-left: 1rem;
+        }
+
+        ul li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        ul li::before {
+            content: "•";
+            font-size: 1.2rem;
+            color: var(--subtext-color);
         }
 
         footer {
             text-align: center;
-            padding: 1rem;
-            background: var(--primary-color);
-            color: var(--white);
+            padding: 1.5rem 0;
             margin-top: 2rem;
+            border-top: 1px solid var(--shadow);
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-            }
-
-            main {
-                padding: 1rem;
-            }
-        }
-
-        /* Interactivity */
         .collapsible {
-            cursor: pointer;
             font-weight: bold;
-            margin-bottom: 1rem;
+            cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-
-        .collapsible::after {
-            content: "\25B6";
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-
-        .collapsible.open::after {
-            transform: rotate(90deg);
+            margin-bottom: 1rem;
         }
 
         .collapsible-content {
             display: none;
-            margin-top: 0.5rem;
+            padding-left: 1rem;
         }
 
         .collapsible.open + .collapsible-content {
@@ -144,7 +138,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="swiftl.html">Timeline</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
                 <li><a href="faq.html">FAQ</a></li>
             </ul>
         </nav>
@@ -207,10 +201,10 @@
     </footer>
 
     <script>
-        // Add interactivity for collapsible sections
-        document.querySelectorAll('.collapsible').forEach(collapse => {
-            collapse.addEventListener('click', () => {
-                collapse.classList.toggle('open');
+        // Collapsible sections interactivity
+        document.querySelectorAll('.collapsible').forEach(collapsible => {
+            collapsible.addEventListener('click', () => {
+                collapsible.classList.toggle('open');
             });
         });
     </script>
