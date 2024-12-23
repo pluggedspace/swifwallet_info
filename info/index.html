@@ -3,26 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A simple website with links to About and Contact pages">
+    <meta name="description" content="Navigate to different sections of the website easily.">
     <title>Home - My Website</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Optional CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Inline styles for convenience (can be moved to a CSS file) */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 10px 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            border: 2px solid white;
+            border-radius: 25px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            background: white;
+            color: #2575fc;
+            transform: scale(1.05);
+        }
+
+        footer {
+            position: absolute;
+            bottom: 10px;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Website</h1>
-        <nav>
-            <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="swifTL.html">Timeline</a></li>
-                <li><a href="FAQ.html">FAQ</a></li>
-            </ul>
-        </nav>
+        <h1>Welcome to Swif</h1>
     </header>
-    <main>
-        <p>This is the homepage of a simple static website hosted on Netlify. Use the links above to navigate.</p>
-    </main>
+    <nav>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="swifTL.html">Timeline</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+        </ul>
+    </nav>
     <footer>
-        <p>&copy; 2024 My Website</p>
+        <p>&copy; 2024 Swif. All rights reserved.</p>
     </footer>
 </body>
 </html>
