@@ -42,6 +42,26 @@
             margin-bottom: 2rem;
         }
 
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--subtext-color);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover {
+            background: var(--shadow);
+            color: var(--text-color);
+        }
+
         .section {
             margin-bottom: 2rem;
         }
@@ -145,6 +165,13 @@
 <body>
     <div class="timeline-container">
         <h1>Platform Launch Timeline</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="swiftl.html">Timeline</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
 
         <section class="section" id="prelaunch">
             <h2 class="section-title">Pre-Launch (Q4 2024)</h2>
