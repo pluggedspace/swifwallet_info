@@ -11,6 +11,7 @@
             --background: #fff;
             --text-color: #333;
             --subtext-color: #555;
+            --highlight-color: #4CAF50;
             --shadow: rgba(0, 0, 0, 0.1);
             --transition: 0.3s ease;
         }
@@ -26,41 +27,46 @@
             background-color: var(--background);
             color: var(--text-color);
             line-height: 1.8;
+            font-size: 1rem;
+            padding: 0 1rem;
         }
 
         header {
-            padding: 1.5rem 2rem;
+            padding: 2rem 2rem 1rem;
             border-bottom: 1px solid var(--shadow);
         }
 
         header h1 {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: bold;
-            margin-bottom: 0.5rem;
+            color: var(--highlight-color);
+            margin-bottom: 1rem;
+            text-align: center;
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            gap: 1rem;
-            margin-top: 0.5rem;
+            justify-content: center;
+            gap: 1.5rem;
         }
 
         nav ul li a {
             text-decoration: none;
             color: var(--subtext-color);
             padding: 0.5rem 1rem;
+            font-weight: bold;
             border-radius: 4px;
             transition: var(--transition);
         }
 
         nav ul li a:hover {
-            background: var(--shadow);
-            color: var(--text-color);
+            background: var(--highlight-color);
+            color: #fff;
         }
 
         main {
-            max-width: 800px;
+            max-width: 900px;
             margin: 2rem auto;
             padding: 0 1rem;
         }
@@ -78,12 +84,13 @@
         }
 
         h2 {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             font-weight: bold;
             margin-bottom: 1rem;
+            color: var(--highlight-color);
         }
 
-        p {
+        p, ul {
             color: var(--subtext-color);
             margin-bottom: 1rem;
         }
@@ -103,13 +110,13 @@
         ul li::before {
             content: "•";
             font-size: 1.2rem;
-            color: var(--subtext-color);
+            color: var(--highlight-color);
         }
 
         footer {
             text-align: center;
-            padding: 1.5rem 0;
-            margin-top: 2rem;
+            padding: 2rem 0;
+            margin-top: 3rem;
             border-top: 1px solid var(--shadow);
         }
 
@@ -119,7 +126,16 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 1rem;
+            background-color: var(--highlight-color);
+            color: white;
+            border-radius: 6px;
             margin-bottom: 1rem;
+            transition: var(--transition);
+        }
+
+        .collapsible:hover {
+            background-color: #388E3C;
         }
 
         .collapsible-content {
@@ -130,6 +146,33 @@
         .collapsible.open + .collapsible-content {
             display: block;
         }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            body {
+                padding: 0;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+                text-align: center;
+            }
+
+            section {
+                padding: 1rem;
+            }
+
+            .collapsible {
+                font-size: 1.1rem;
+                padding: 0.8rem;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -143,6 +186,7 @@
             </ul>
         </nav>
     </header>
+
     <main>
         <section>
             <div class="collapsible">Our Mission</div>
@@ -154,6 +198,7 @@
                 </p>
             </div>
         </section>
+
         <section>
             <div class="collapsible">Use Cases</div>
             <div class="collapsible-content">
@@ -166,6 +211,7 @@
                 </ul>
             </div>
         </section>
+
         <section>
             <div class="collapsible">Development Stage</div>
             <div class="collapsible-content">
@@ -182,6 +228,7 @@
                 </p>
             </div>
         </section>
+
         <section>
             <div class="collapsible">Token Development</div>
             <div class="collapsible-content">
@@ -196,6 +243,7 @@
             </div>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2024 Swif. All rights reserved.</p>
     </footer>
