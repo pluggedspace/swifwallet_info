@@ -151,22 +151,38 @@
 
   <!-- Video Section -->
   <section class="py-20 relative overflow-hidden">
-    <div class="container mx-auto px-6 text-center">
-      <h3 class="text-3xl font-bold mb-12" data-aos="fade-up">See How Swif Works</h3>
-      <div class="relative rounded-xl overflow-hidden" data-aos="zoom-in">
-        <img src="/api/placeholder/1024/576" alt="Video Thumbnail" class="w-full">
-        <button class="absolute inset-0 flex items-center justify-center bg-black/50 hover:bg-black/60 transition-colors">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <div class="container mx-auto px-6 text-center">
+    <h3 class="text-3xl font-bold mb-12" data-aos="fade-up">See How Swif Works</h3>
+    <div class="relative rounded-xl overflow-hidden" data-aos="zoom-in">
+      <!-- Video Thumbnail -->
+      <div class="relative">
+        <img src="https://img.youtube.com/vi/6Z-aVNE9eU8/maxresdefault.jpg" 
+             alt="How Swif Works Video Thumbnail" 
+             class="w-full" 
+             id="video-thumbnail">
+        <button 
+          class="absolute inset-0 flex items-center justify-center bg-black/50 hover:bg-black/60 transition-colors"
+          id="play-button"
+          aria-label="Play How Swif Works video">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
         </button>
       </div>
+      <!-- Embedded Video -->
+      <div class="hidden" id="video-container">
+        <iframe 
+          src="https://www.youtube.com/embed/6Z-aVNE9eU8?autoplay=1&rel=0" 
+          title="How Swif Works Video" 
+          class="w-full aspect-video rounded-xl" 
+          frameborder="0" 
+          allow="autoplay; encrypted-media" 
+          allowfullscreen></iframe>
+      </div>
     </div>
-  </section>
-
-  <!-- Features Section -->
-  <!-- Previous sections remain the same -->
+  </div>
+</section>
 
 <!-- Comprehensive Features Section -->
 <section class="py-20 bg-darkBlue relative">
@@ -365,24 +381,49 @@
 </div>
 </section>
             
-  <!-- Download App Section -->
-  <section id="download" class="py-20 relative overflow-hidden">
-    <div class="container mx-auto px-6">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div data-aos="fade-right">
-          <h3 class="text-4xl font-bold mb-6">Download Swif App</h3>
-          <p class="text-gray-400 mb-8">Get started with Swif today. Download our secure app and experience borderless banking.</p>
-          <div class="flex flex-wrap gap-4">
-            <img src="/api/placeholder/200/60" alt="App Store" class="download-badge cursor-pointer">
-            <img src="/api/placeholder/200/60" alt="Google Play" class="download-badge cursor-pointer">
-          </div>
-        </div>
-        <div class="relative" data-aos="fade-left">
-          <img src="/api/placeholder/400/800" alt="App Preview" class="rounded-xl shadow-2xl mx-auto">
+<!-- Download App Section -->
+<section id="download" class="py-20 relative overflow-hidden">
+  <div class="container mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- Text Section -->
+      <div data-aos="fade-right">
+        <h3 class="text-4xl font-bold mb-6">Download Swif App</h3>
+        <p class="text-gray-400 mb-8">
+          Get started with Swif today. Download our secure app and experience borderless banking.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <!-- Apple Store Badge -->
+          <a href="https://www.apple.com/app-store/" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             aria-label="Download on the Apple App Store">
+            <img 
+              src="https://via.placeholder.com/200x60?text=Apple+Store" 
+              alt="Download on the Apple App Store" 
+              class="download-badge cursor-pointer">
+          </a>
+          <!-- Google Play Badge -->
+          <a href="https://play.google.com/store" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             aria-label="Download on Google Play">
+            <img 
+              src="https://via.placeholder.com/200x60?text=Google+Play" 
+              alt="Download on Google Play" 
+              class="download-badge cursor-pointer">
+          </a>
         </div>
       </div>
+      <!-- App Preview Section -->
+      <div class="relative" data-aos="fade-left">
+        <img 
+          src="https://via.placeholder.com/400x800?text=App+Preview" 
+          alt="Preview of Swif App" 
+          class="rounded-xl shadow-2xl mx-auto">
+      </div>
     </div>
-  </section>
+  </div>
+</section>
   
   
 <section id="partners" class="py-20 bg-gradient-to-b from-darkBlue to-primary relative overflow-hidden">
@@ -545,5 +586,22 @@
       once: true
     });
   </script>
+  
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const playButton = document.getElementById("play-button");
+    const thumbnail = document.getElementById("video-thumbnail");
+    const videoContainer = document.getElementById("video-container");
+
+    playButton.addEventListener("click", () => {
+      // Hide the thumbnail and play button
+      thumbnail.classList.add("hidden");
+      playButton.classList.add("hidden");
+
+      // Show the embedded video
+      videoContainer.classList.remove("hidden");
+    });
+  });
+</script>
 </body>
 </html>
