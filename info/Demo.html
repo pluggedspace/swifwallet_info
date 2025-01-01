@@ -101,27 +101,36 @@
 
   <!-- Header -->
   <header class="bg-primary/90 backdrop-blur-md border-b border-gray-800 fixed w-full z-50">
-    <div class="container mx-auto flex justify-between items-center px-6 py-4">
-      <div class="flex items-center space-x-2">
-        <img src="/api/placeholder/40/40" alt="Swif Logo" class="rounded-lg">
-        <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Swif</h1>
-      </div>
-      <nav class="hidden md:flex space-x-8">
-        <a href="#features" class="hover:text-accent transition-colors">Features</a>
-        <a href="#how-it-works" class="hover:text-accent transition-colors">How It Works</a>
-        <a href="#testimonials" class="hover:text-accent transition-colors">Testimonials</a>
-        <a href="#download" class="hover:text-accent transition-colors">Download</a>
-      </nav>
-      <div class="flex space-x-4">
-        <a href="#login" class="hidden md:inline-block hover:text-accent transition-colors">Login</a>
-        <a href="#signup" class="hidden md:inline-block bg-accent text-white px-6 py-2 rounded-lg hover:bg-accent/90 transition-colors">Sign Up</a>
-        <button class="md:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-          </svg>
-        </button>
-      </div>
+  <div class="container mx-auto flex justify-between items-center px-6 py-4">
+    <div class="flex items-center space-x-2">
+      <img src="/api/placeholder/40/40" alt="Swif Logo" class="rounded-lg">
+      <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Swif</h1>
     </div>
+    <nav class="hidden md:flex space-x-8">
+      <a href="#features" class="hover:text-accent transition-colors">Features</a>
+      <a href="#how-it-works" class="hover:text-accent transition-colors">How It Works</a>
+      <a href="#testimonials" class="hover:text-accent transition-colors">Testimonials</a>
+      <a href="#download" class="hover:text-accent transition-colors">Download</a>
+    </nav>
+    <div class="flex space-x-4">
+      <a href="#login" class="hidden md:inline-block hover:text-accent transition-colors">Login</a>
+      <a href="#signup" class="hidden md:inline-block bg-accent text-white px-6 py-2 rounded-lg hover:bg-accent/90 transition-colors">Sign Up</a>
+      <button id="hamburger-menu" class="md:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile Navigation -->
+  <nav id="mobile-menu" class="hidden md:hidden bg-primary/90 px-6 py-4 space-y-4">
+    <a href="#features" class="block hover:text-accent transition-colors">Features</a>
+    <a href="#how-it-works" class="block hover:text-accent transition-colors">How It Works</a>
+    <a href="#testimonials" class="block hover:text-accent transition-colors">Testimonials</a>
+    <a href="#download" class="block hover:text-accent transition-colors">Download</a>
+    <a href="#login" class="block hover:text-accent transition-colors">Login</a>
+    <a href="#signup" class="block bg-accent text-white px-6 py-2 rounded-lg hover:bg-accent/90 transition-colors">Sign Up</a>
+  </nav>
   </header>
 
   <!-- Hero Section -->
@@ -621,6 +630,19 @@
       videoContainer.classList.remove("hidden");
     });
   });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const hamburgerMenu = document.getElementById("hamburger-menu");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  hamburgerMenu.addEventListener("click", () => {
+    // Toggle the hidden class
+    mobileMenu.classList.toggle("hidden");
+    mobileMenu.classList.toggle("block");
+  });
+});
 </script>
       
 </body>
